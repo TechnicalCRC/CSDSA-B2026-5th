@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Date</h1>
+
+  <div id="date1"></div>
+  <div id="date2"></div>
+  <script>
+    let d1 = Date('3-23-2022');
+    let d2 = new Date(2020,11,20,14,34,21,45);
+//document.getElementById('date1').innerHTML = d1;
+date1.innerHTML = d1;
+//document.querySelector('#date2').innerHTML = d2;
+    console.log(d2.getDay())
+
+
+  // setTimeout  - sleep
+  
+function time(){
+  date2.innerHTML = new Date();
+}
+
+  let t1 = setTimeout(()=>console.log(new Date()),5000);
+
+  // setInterval  -   repeat
+let count=0;
+ let t2 = setInterval(function(){
+  time(); 
+  console.log("CSDS A + B " + ++count);
+
+  if(count > 10)
+  clearInterval(t2)
+ },1000);
+ 
+ 
+  </script>
+<button onclick="clearTimeout(t1)">Stop Timeout</button>
+<button onclick="clearInterval(t2)">Stop Interval</button>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Object</h1>
+  <script>
+    //  var a =10;
+    //  var a  = 20;
+    //  b= 20;
+    //  console.log(b)
+    //  let x = 10;
+    //  x = 20;
+
+    //  const c = 20;
+    //  //c = 30;
+
+
+
+    let arr = [
+      1,
+      2,
+      3
+    ]
+
+    console.log(typeof arr)
+    let s1 = "ram";
+    let s = new String("ram");
+    console.log(typeof s)
+
+    console.log(s1)
+    console.log(s)
+
+    let p = {}
+    let p1 = new Object();
+
+
+    let person = {
+      "stu name": "Vipin",
+      'age': 23,
+      city: "noida"
+    }
+    console.log(typeof person)
+    console.log(person)
+    console.log(person.age)
+    console.log(person.name)
+    console.log('name - ' + person['stu name']);
+    console.log(person["age"]);
+
+
+    let bird = {
+      color: "green",
+      name: "Parrot",
+      age: 2,
+      fly: () => {
+        console.log("bird can fly....")
+      },
+      eat: function () {
+        return "bird can eat Green Chili...";
+      }
+    }
+
+    console.log(bird.color)
+    console.log(bird.age)
+    console.log("fly --- " + bird.fly)
+    console.log("eat type" + typeof bird.eat)
+    document.write("eat ---" + bird.eat);
+    console.log(bird.fly())
+    let q = bird.fly();
+    console.log(q);
+    console.log(bird.eat())
+
+
+    console.log(typeof bird.fly())
+
+    // destructuring
+
+    // Array
+
+    let arr1 = ["BMW", "Maruti", "Nissan", "Tata"]
+    let [car3, , car1, car2, car4] = arr1;
+
+    console.log(car1)
+    console.log(car4)
+    console.log(car3)
+
+    // object
+
+    let animal = {
+      category: "Dog",
+      age: 4,
+      legs: 4,
+      food: {
+        breakfast: "1",
+        lunch: "2",
+        dinner: "3"
+      }
+    }
+
+    console.log(animal.category)
+    let { food, category, age } = animal;
+    let { lunch } = food;
+
+    console.log(animal.food.lunch)
+    console.log(category)
+    console.log(age)
+    console.log("Lunch :" + lunch)
+
+    let { fly, eat } = bird;
+    fly();
+    eat();
+
+    let ar1 = ['c1', 'c2', 'c3', 'c4']
+    console.log(ar1.splice(2, 2, 'c5', "c6", 56, 2.6, [1, 4, 'a', "56"], { "a": 34, "b": 'bbbb' }, 3, 9));
+    console.log(ar1)
+
+
+
+    function aa(a = 1, b = 1, c = 1) {
+
+    }
+  </script>
+
+
+
+
+
+  <script>
+    function getcube() {
+      var number = document.getElementById("number").value;
+      alert(number * 4);
+    }
+
+    document.write(5*'5')
+  </script>
+  <form>
+    Enter No:<input type="text" id="number" value="5" name="number" /><br />
+    <input type="button" value="ok" onclick="getcube()" />
+  </form>
+
+
+</body>
+
+</html>
