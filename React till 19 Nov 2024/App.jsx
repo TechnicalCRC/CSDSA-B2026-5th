@@ -5,6 +5,8 @@ import BootStrapEx from './BootStrapEx.jsx';
 import FoodPlanner2 from "./FoodPlanner2.jsx";
 import FoodPlanner from "./ComponentFood/FoodPlanner.jsx";
 import Person from "./Person.jsx";
+import MovieData from "./MovieData.jsx";
+import DataMovie from "./DataMovie.js";
 
  export default function App() {
    let nameData = "Atul";
@@ -12,11 +14,11 @@ import Person from "./Person.jsx";
    let courseData = "CSDS";
 
   return <>
-      {/* FoodPlanner Project by components division and props */}   
-      <FoodPlanner></FoodPlanner>
-   
-    {/*  props practice - pass attribute */} 
-    {/* <Person name={nameData} course={courseData} branch={branchData}></Person> */} 
+
+   <MovieData masterData={DataMovie}></MovieData>      
+      {/* <FoodPlanner></FoodPlanner> */}
+     
+    {/* <Person name={nameData} course={courseData} branch={branchData}></Person> */}
   </>
  }
 
