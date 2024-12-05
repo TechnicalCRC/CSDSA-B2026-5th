@@ -4,6 +4,9 @@ import Person from "./Person";
 import Students from "./Students";
 import FoodPlanner from "./FoodComponent/FoodPlanner";
 import Todo from "./TodoComponent/Todo";
+import Events from "./Events";
+import Fruits from "./FruitComponent/Fruits";
+import Counter from "./Counter";
 
 export default function App() {
   let nameData = 'Rajeev';
@@ -11,11 +14,14 @@ export default function App() {
   let branchData = 'IT'
   return (
     <>
+   {/* <Counter></Counter> */}
+<Fruits></Fruits>
+    {/* <Events></Events> */}
       {/* <Students></Students> */}
       {/* <Person name={nameData} course={courseData} branch={branchData} /> */}
       {/* <FoodPlanner></FoodPlanner> */}
 
-      <Todo></Todo>
+      {/* <Todo></Todo> */}
     </>
   );
 }
